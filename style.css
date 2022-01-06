@@ -1,30 +1,28 @@
 * {
     margin: 0;
 }
-
 body {
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
-header {
+/* header */
+.header {
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
     align-items: center;
 }
 
-header a {
+.header a {
     margin-right: 20px;
     color:rgba(0, 0, 0, 0.87);
     font-size: 15px;
     text-decoration: inherit;
 }
 
-header a:hover {
+.header a:hover {
     text-decoration: underline;
 }
 
@@ -39,24 +37,18 @@ header a:hover {
     margin-right: 10px;
 }
 
-/* .logo {
-    width: auto;
-    height: 20px;
+.main-body {
     display: flex;
     flex: 1;
+    margin-top: 12%;
     flex-direction: column;
-    align-items: center;
-    margin: 0;
-} */
+    /* align-items: center;
+    justify-content: center; */
+}
 
-img {
-    /* object-fit: contain; */
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-
+.main-body img {
+    object-fit: contain;
+    height: 100px;
 }
 
 .search-input {
@@ -65,7 +57,7 @@ img {
     border: 1px solid lightgray;
     height: 30px;
     padding: 10px 20px;
-    border-radius: 9px;
+    border-radius: 999px;
     width: 75vw;
     margin: 0 auto;
     margin-top: 40px;
