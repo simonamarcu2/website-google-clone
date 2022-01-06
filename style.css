@@ -39,7 +39,6 @@ body {
 
 .main-body {
     display: flex;
-    flex: 1;
     margin-top: 12%;
     flex-direction: column;
     /* align-items: center;
@@ -61,12 +60,13 @@ body {
     width: 75vw;
     margin: 0 auto;
     margin-top: 40px;
-    max-width: 560px;
+    /* max-width: 560px; */
+    justify-content: space-between;
 }
 
 
 .searc-input input {
-    flex: 1;
+    /* flex: 1; */
     padding: 10px 20px;
     border: none;
     outline: none;
