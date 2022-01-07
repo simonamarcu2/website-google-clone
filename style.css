@@ -44,9 +44,21 @@ body {
 .main-body {
     display: flex;
     flex-direction: column;
+    min-height: 150px;
+    max-height: 560px;
+    /* height: calc(100% - 560px); */
+    flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-.main-body img {
+.main-body .google {
+    max-height: 100%;
+    max-width: 100%;
+    /* width: auto; */
+}
+
+.google {
+    aspect-ratio: auto 272 / 92;
     object-fit: contain;
     height: 85px;
 }
@@ -56,11 +68,10 @@ body {
     align-items: center;
     border: 1px solid #ccc;
     height: 30px;
-    padding: 7px 20px;
+    padding-top: 6px;
     border-radius: 999px;
     width: 75vw;
     margin: 0 auto;
-    margin-top: 40px;
     max-width: 100%;
     justify-content: space-between;
     transition:ease-out .3s;
@@ -108,6 +119,9 @@ footer {
 }
 
 .spacing{
+    flex-grow: 1;
+    flex-shrink: 0;
+    box-sizing: border-box;
     height: 250px;
 }
 
@@ -117,14 +131,55 @@ footer {
     font-size: 15px;
     color: #70757a;
     display: block;
+    font-size: 15px;
 }
 
 .closing{
     display: block;
     flex-wrap: wrap;
-    padding: 0 20px;
+    /* padding: 0; */
     flex-shrink: 0;
     box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+    align-items: center;
+    min-width: 13vw;
+    /* justify-content: space-between; */
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+.privacyTerms-right, .adBusHow-left, a{
+    text-decoration:none;
+    color: #70757a;
+    display: flex;
+    white-space: nowrap;
+    /* justify-content: space-between; */
+}
+
+.privacyTerms-right, .adBusHow-left{
+    padding: 15px;
+    /* justify-content: space-evenly; */
+
+}
+
+.adBusHow-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
+    padding: 0;
+    margin: 0;
+    min-width: 30%;
+    justify-content: space-evenly;
+    justify-content: flex-start;
+    order: 1;
 }
 
 .goGreen{
@@ -132,47 +187,39 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 20px;
     order: 0;
     width: 100%;
     text-decoration: inherit;
+    font-size: 14px;
 }
 
-a:hover {
-    text-decoration: underline;
+.carbonN {
+    order: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+    display: flex;
 }
 
 .leaf{
     height: 20px;
     width: 20px;
     background-color: #F2F2F2;
+    display: block;
+    white-space: nowrap;
 }
 
-.eco, .privacyTerms-right, .adBusHow-left{
-    padding: 15px;
-}
-
-.lastlinks {
+.privacyTerms-right {
     display: flex;
     flex-direction: row;
     align-items: center;
-    min-width: 13vw;
     justify-content: space-evenly;
+    min-width: 30%;
+    order: 3;
 }
 
-.adBusHow-left{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-width: 13vw;
+@media only screen and (max-width: 1200px){
+.closing {
     justify-content: space-evenly;
-    margin-right: 10px;
-}
-
-.privacyTerms-right{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    min-width: 13vw;
-    justify-content: space-evenly;
-}
+}}
