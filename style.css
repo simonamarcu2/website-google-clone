@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px 30px;
-    /* align-items: center; */
+    align-items: center;
 }
 
 .header a {
@@ -30,7 +30,7 @@ body {
     text-decoration: underline;
 }
 
-.header-right {
+.header-right, .header-left {
     display: flex;
     align-items: center;
     min-width: 13vw;
@@ -43,10 +43,11 @@ body {
 
 .main-body {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     min-height: 150px;
-    max-height: 560px;
-    /* height: calc(100% - 560px); */
+    max-height: 450px;
+    height: calc(100% - 560px);
     flex-shrink: 0;
     box-sizing: border-box;
 }
@@ -67,7 +68,7 @@ body {
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
-    height: 30px;
+    height: 35px;
     padding-top: 6px;
     border-radius: 999px;
     width: 75vw;
@@ -89,7 +90,7 @@ body {
     padding: 10px 20px;
     border: 0;
     outline: 0;
-    width: 700;
+    width: 700vw;
 }
 
 .search-input .material-icons {
@@ -203,8 +204,8 @@ a:hover {
 }
 
 .leaf{
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
     background-color: #F2F2F2;
     display: block;
     white-space: nowrap;
